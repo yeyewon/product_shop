@@ -2,7 +2,7 @@ import { useState } from "react"
 import { users } from "../data/users"
 import { useNavigate } from "react-router-dom"
 
-const SignIn = () => {
+const SignIn = ({onLogin}) => {
 
     // 입력 데이터를 객체로 통합
     const [loginData, setLoginData] = useState({
@@ -34,6 +34,7 @@ const SignIn = () => {
 
         if(matched){
             setResult("success");
+            onLogin(userId); // 앱 로그인 정보 전달
             console.log(`성공ID: ${userId}, pw: ${password}`)
 
             navigate("/") // 인덱스 페이지로 이동
