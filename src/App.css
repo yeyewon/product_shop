@@ -11,6 +11,9 @@
 .main{
   padding: 20px;
 }
-.product-list{
+.product-list,
+.add-product,
+.sign-in
+{
   padding: 20px;
 }

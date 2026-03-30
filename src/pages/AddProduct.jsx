@@ -35,7 +35,7 @@ const AddProduct = () => {
         }
             
         // 가격검증
-        if(isNaN(formdata.price) || formdata.price <=0) {
+        if(isNaN(formdata.price) || formdata.price <= 0) {
             alert("모든 필드를 입력해주세요");
             return;
         }
