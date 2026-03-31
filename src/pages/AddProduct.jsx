@@ -23,7 +23,7 @@ const AddProduct = () => {
         })
     }
 
-    // form제출
+    // form 제출
     const handlesubmit = (e) => {
         e.preventDefault()
         console.log("상품추가",formdata);
@@ -34,7 +34,7 @@ const AddProduct = () => {
             return;
         }
             
-        // 가격검증
+        // 가격 검증
         if(isNaN(formdata.price) || formdata.price <= 0) {
             alert("모든 필드를 입력해주세요");
             return;
@@ -46,12 +46,22 @@ const AddProduct = () => {
         navigate("/products")
     }
 
+    // 취소 버튼 처리
+    const handleCancle = () => {
+        // 폼 초기화
+        setFormData({
+            name: "",
+            price: "",
+            description: ""
+        })
+    }
+
     return (
         <section className="add-product">
             <h2>상품 등록</h2>
-            <form onSubmit={handlesubmit}>
+            <form onSubmit={handlesubmit} className="add-form">
                 <div>
-                    <label htmlFor="name">상품명:</label>
+                    <label htmlFor="name">상품명</label>
                     <input 
                         type="text" 
                         placeholder="상품명을 입력하세요"
@@ -62,7 +72,7 @@ const AddProduct = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="price">가격:</label>
+                    <label htmlFor="price">가격</label>
                     <input 
                         type="number" 
                         placeholder="가격을 입력하세요"
@@ -74,7 +84,7 @@ const AddProduct = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="description">설명:</label>
+                    <label htmlFor="description">설명</label>
                     <textarea 
                         placeholder="상품 설명을 입력하세요"
                         rows={5}
@@ -86,6 +96,7 @@ const AddProduct = () => {
                 </div>
                 <div>
                     <button type="submit">등록</button>
+                    <button type="button" onClick={handleCancle}>취소</button>
                 </div>
             </form>
         </section>

@@ -28,13 +28,73 @@
   color: #333;
 }
 
-
+/* main style */
 .main{
   padding: 20px;
+  text-align: center;
+}
+.main img{
+  margin-top: 20px;
 }
 .product-list,
 .add-product,
 .sign-in
 {
   padding: 20px;
+  text-align: center;
+}
+
+/* 상품 목록 */
+.table-list{
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.table-list th,
+.table-list td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.table-list thead{
+  background-color: #eee;
+}
+.btn-add{
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20%;
+}
+.btn-add button{
+  padding: 6px 12px;
+}
+
+/* 상품 등록 */
+.add-form{
+  width: 40%;
+  margin: 0 auto;
+  text-align: left;
+}
+.add-form label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.add-form input,
+.add-form textarea{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.add-form button{
+  margin: 4px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.add-form button[type="button"]{
+  background-color: #555;
 }
