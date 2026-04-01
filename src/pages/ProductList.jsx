@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { products } from "../data/products"
 
 const ProductList = () => {
+    
     return (
         <section className="product-list">
             <h2>상품 목록</h2>
@@ -15,10 +16,12 @@ const ProductList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((product) => (
+                    {products.map(product => (
                         <tr key={product.id}>
                             <td>{product.id}</td>
-                            <td>{product.name}</td>
+                            <td>
+                                <Link to={`/products/${product.id}`}>{product.name}</Link>
+                            </td>
                             <td>{product.price}</td>
                             <td>{product.description}</td>
                         </tr>
