@@ -47,7 +47,7 @@ const SignIn = ({onLogin}) => {
     return (
         <div className="sign-in">
             <h2>로그인</h2>
-            <form onSubmit={handleSubmit}>
+            <form className="signin-form" onSubmit={handleSubmit}>
                 <div>
                     <input 
                         type="text" 
